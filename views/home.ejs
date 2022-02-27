@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Second Node Site</h1>
+
+    <form action="/" method="POST">
+        <select name="selectJob" id="select-job">
+            <option value="locksmith">locksmith</option>
+            <option value="lawyer">lawyer</option>
+            <option value="dentist">dentist</option>
+        </select>
+
+        <button type="submit" class="main-btn">submit</button>
+
+    </form>
+
+    <div class="main-container">
+        <% if(results) { %>
+            <% results.map(result => { %>
+                <div class="result-container">
+                    <p><%= result.geoName %> <span><%=result.formattedValue %>/100</span></p>
+                </div>
+            <% }); %>
+        <% } %>
+    </div>
+    
+</body>
+</html>

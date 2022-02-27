@@ -1,0 +1,286 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  /* width: fit-content; */
+  /* overflow-x: hidden; */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root, .App {
+  height: 100%;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  background: linear-gradient(45deg, #0b0c10, #091955);
+  /* overflow-x: hidden; */
+}
+
+nav > .logo-btn-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav > .logo-btn-cont button {
+  margin-right: 1rem;
+  cursor: pointer;
+  display: none;
+  color: #66FCF1;
+  background: none;
+  border: none;
+}
+
+nav > .logo-btn-cont button:hover {
+  color: #397974;
+}
+
+nav > .logo-btn-cont a {
+  text-decoration: none;
+}
+
+nav > .logo-btn-cont h1 {
+    white-space: nowrap;
+    color: #66FCF1;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+nav > .link-container {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
+nav > .link-container > a {
+  text-decoration: none;
+  margin-top: 1.5rem ;
+  font-size: x-large;
+  font-weight: bold;
+  color: #66FCF1;
+}
+
+nav > .link-container > a:hover {
+  color: #397974;
+}
+
+.container {
+  padding: 2rem 0;
+  width: 100%;
+  background: #1f2833;
+  min-height: 100vh;
+  /* overflow-x: hidden; */
+}
+
+.container > h1 {
+  text-align: center;
+  color: #66FCF1;
+  margin: 0;
+  padding: 2rem;
+}
+
+.container > .header {
+  display: flex;
+  justify-content: center;
+}
+
+.container > .header >.select-delete-container > select {
+  font-size: x-large;
+}
+
+.container > .header > .select-delete-container > .delete-icon {
+  color: #66FCF1;
+  cursor: pointer;
+  margin-left: 2px;
+}
+
+.container > .header > button.open-adding {
+  cursor: pointer;
+  background: transparent;
+  color: #66FCF1;
+  border: 2px #66FCF1 solid;
+  margin-left: 2rem;
+  font-size: large;
+  transition: all 0.5s ease;
+  height: fit-content;
+  padding: 3px 5px;
+}
+
+.container > .header > button.open-adding:hover {
+  background: #66FCF1;
+  color: #1f2833;
+}
+
+.table-container {
+  margin: 2rem auto;
+  width: 80%;
+}
+
+.container > .header > form >input {
+  margin-left: 1rem;
+  border: 2px #66FCF1 solid;
+  color: #66FCF1;
+  background: #1f2833;
+  font-size: large;
+  padding: 2px;
+}
+
+.container > .header > form >button {
+  border: 2px #66FCF1 solid;
+  color: #66FCF1;
+  background: #1f2833;
+  font-size: large;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.container > .header > form >button:hover {
+  background: #66FCF1;
+  color: #1f2833;
+}
+
+.arrow-container .arrow-up {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.arrow-up::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  margin: 16.5rem auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-left: 10px solid #66FCF1;
+  border-top: 10px solid #66FCF1;
+  transform: rotate(45deg);
+  -webkit-animation: 3s arrow infinite ease;
+  animation: 1s arrow infinite ease;
+}
+
+@-webkit-keyframes arrow {
+  0%, 100% {
+    top: 50px;
+  }
+  50% {
+    top: 80px;
+  }
+}
+
+@keyframes arrow {
+  0%, 100% {
+    top: 50px;
+  }
+  50% {
+    top: 80px;
+  }
+}
+
+
+
+.loading {
+  margin: 2rem auto;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loading > h2{
+  color: #66FCF1;
+}
+
+
+footer {
+  background: linear-gradient(45deg, #0b0c10, #091955);
+  margin: 0;
+  height: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer > p {
+  /* background: #0b0c10; */
+  margin: 0;
+  padding: 1rem 0;
+  color: #66FCF1;
+  
+}
+
+footer > a {
+  /* background: #0b0c10; */
+  margin: 0;
+  padding: 1rem 0;
+  color: #66FCF1;
+  width: fit-content;
+}
+
+@media screen and (max-width: 680px) {
+  .container > .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+
+  .container > .header > button.open-adding {
+    width: 80%;
+  }
+
+}
+
+
+@media screen and (max-width: 640px) {
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav >  .logo-btn-cont button {
+    display: block;
+  }
+  
+  nav > .logo-btn-cont h1 {
+      height: fit-content;
+  }
+  
+  nav > .link-container {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  nav > .link-container > a {
+    padding: 1.3rem;
+    text-align: center;
+    margin: 0;
+    border-top: 1px white solid;
+    border-bottom: 1px white solid;
+
+  }
+
+  .arrow-container .arrow-up {
+    display: none;
+  }
+
+  .table-container {
+    width: 93%;
+  }
+
+}
+
