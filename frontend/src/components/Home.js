@@ -37,7 +37,7 @@ function Home() {
       const data = await jsonRes.json()
 
       // console.log(data);
-      // console.log("dick");
+      
   
       setHome(data)
     }
