@@ -31,8 +31,6 @@ import nodemailer from 'nodemailer'
 const app = express();
 const port = process.env.PORT || 5000
 
-app.use(express.json());
-
 app.use(cors({
     origin: 'http://localhost:3000'
 }));
@@ -48,7 +46,6 @@ mongoose.connect(process.env.MONGODB_URI,  {useNewUrlParser: true, useUnifiedTop
 app.set('view engine', 'ejs');
 
 //middleware & static files
-app.use(express.static('public'));
 app.use(express.urlencoded({extended:true}));
 app.use(morgan('dev'));
 
@@ -57,7 +54,6 @@ app.use(express.static(path.join(__dirname, 'frontend', 'build')));
 
 //read json body
 // app.use(express.json());
-app.use(bodyParser.json());
 
 
 //send emails 
