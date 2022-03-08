@@ -53,7 +53,7 @@ app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'frontend', 'build')));
 
 //read json body
-// app.use(express.json());
+app.use(express.json());
 
 
 //send emails 
